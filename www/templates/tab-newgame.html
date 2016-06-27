@@ -1,0 +1,40 @@
+<ion-view hide-nav-bar="true">
+  <ion-content scroll="false">
+    
+    <div class="bar bar-header bar-stable">
+      <div class="timercount" ng-if="timeroption">
+        <timer interval="1000">{{minutes}}:{{seconds}}</timer>/{{duration}}
+      </div>
+      <h1 class="title">{{category}} wordsearch</h1>
+      <div class="buttons wordcount">
+          {{puzzle.wordcount}}/{{puzzle.words.length}}
+        
+      </div>
+    </div>  
+    
+    
+    <section id="clock-timer" ng-if="timeroption">
+      <timer>
+        <div class="progress-bar">
+          <div class="progress" id="progress" style="width: {{(millis/result)| number:2}}%;"></div> 
+        </div>
+      </timer>
+    </section>
+    <div class="maincontent padding">
+      
+          
+      <div id="word-search" >
+        <ul class="words">
+          <li ng-repeat="word in puzzle.words" ng-class="{'found': word.found}">
+            {{word.name}}
+          </li>
+        </ul>
+        <word-search-puzzle matrix="matrix" words="words" api="puzzle"></word-search-puzzle>
+        <div class="status">
+          <button ng-click="puzzle.solve()" ng-show="!puzzle.solved" class="solve button button-stable" id="solve">solve</button>
+          <strong ng-show="puzzle.solved" >Solved!</strong>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

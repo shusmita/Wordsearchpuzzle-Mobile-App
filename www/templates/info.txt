@@ -1,0 +1,7 @@
+ng-mousedown="selectStart(item)" ng-mouseup="selectEnd()" ng-mouseenter="selectEnter(item)"
+
+ng-touchstart="selectStart(item)" ng-touchend="selectEnd()" ng-touchmove="selectEnter(item)"
+
+on-touch="selectStart(item)" on-release="selectEnd()" on-swipe="selectEnter(item)"
+
+my-touchstart="selectStart(item)" my-touchend="selectEnd(item)

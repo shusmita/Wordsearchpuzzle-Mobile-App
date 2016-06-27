@@ -1,0 +1,148 @@
+/* Empty. Add your own CSS if you like */
+.word-search-puzzle {
+    border: 1px solid #999;
+}
+.word-search-puzzle td {
+    background-color: white;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.word-search-puzzle.puzzle-solved td {
+    background-color: #eee;
+}
+.word-search-puzzle td span {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+.word-search-puzzle .puzzle-found {
+    background-color: #eee;
+}
+.word-search-puzzle .puzzle-selected {
+    background-color: #f5f5f5;
+}
+.word-search-puzzle .puzzle-message span {
+    background-color: #ffffcc;
+    color: red;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #444;
+}
+
+
+
+#word-search {
+    position: relative;
+}
+#word-search .word-search-puzzle {
+    float: left;
+}
+#word-search .words {
+    list-style: none;
+    float: left;
+    margin: 4px 20px 0 0;
+}
+#word-search .words li {
+    font-size: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+#word-search .words .found {
+    color: #bbb;
+    text-decoration: line-through;
+    font-weight: normal
+}
+
+
+body {
+    overflow:hidden;
+    width:100%;
+}
+#word-search .status {
+    position: relative;
+    left: 0;
+    top: 20px;
+}
+
+
+/*================override========*/
+.word-search-puzzle .puzzle-found {
+    background-color: #C0DBC9;
+}
+.word-search-puzzle.puzzle-solved td {
+    background-color: #C0DBC9;
+}
+.word-search-puzzle.puzzle-solved td span {
+    color: #096C26;
+    font-weight:bold;
+    box-shadow: 0px 0px 2px #88B389;
+    /*background-color: #FFC;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #444;*/
+}
+.word-search-puzzle .puzzle-found span{
+    color: #096C26;
+    font-weight:bold;
+    box-shadow: 0px 0px 2px #88B389;
+   /* background-color: #FFC;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #444;*/
+}
+.word-search-puzzle .puzzle-message span {
+    background-color: #F0EFEF;
+    border-radius: 0px !important;
+    box-shadow: 0px 0px 0px #444 !important;
+}
+#word-search .words {
+    float: none;
+}
+#word-search .words li {
+    float: left;
+    padding: 0px 3px;
+}
+#word-search .word-search-puzzle {
+    float: none;
+    clear: both;
+}
+
+.bar .title {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+/*========timer progress bar=============*/
+.bar {
+  background-color: transparent;
+  background-image: none;
+  border-bottom: 1px solid #444; }
+
+
+.progress-bar {
+  background: #191919;
+  height: 7px;
+  margin-bottom: 1em;
+  border-radius: 0px;
+  overflow: hidden; }
+
+.progress {
+  background: #7DB489 ;
+  height: 100%;
+  max-width: 100% !important; }
+
+.timercount timer, .wordcount {
+    height: 40px;
+    line-height: 32px;
+}
+.bar-header{
+    position: relative;
+}
+.maincontent {
+    margin-top: -18px;
+}
+
+
